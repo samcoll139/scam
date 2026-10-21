@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Mukta+Malar:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  font-family: 'Outfit', 'Mukta Malar', 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Custom voice waveforms and micro-animations */
+@keyframes wave-grow {
+  0%, 100% {
+    transform: scaleY(0.2);
+  }
+  50% {
+    transform: scaleY(1.3);
+  }
+}
+
+.wave-bar {
+  animation: wave-grow 1.2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.wave-bar:nth-child(1) { animation-delay: 0.1s; }
+.wave-bar:nth-child(2) { animation-delay: 0.2s; }
+.wave-bar:nth-child(3) { animation-delay: 0.3s; }
+.wave-bar:nth-child(4) { animation-delay: 0.4s; }
+.wave-bar:nth-child(5) { animation-delay: 0.5s; }
+.wave-bar:nth-child(6) { animation-delay: 0.6s; }
+.wave-bar:nth-child(7) { animation-delay: 0.7s; }
+.wave-bar:nth-child(8) { animation-delay: 0.8s; }
+.wave-bar:nth-child(9) { animation-delay: 0.9s; }
+.wave-bar:nth-child(10) { animation-delay: 1.0s; }
+
+/* Blinking avatar eye animation */
+@keyframes eye-blink {
+  0%, 90%, 100% {
+    transform: scaleY(1);
+  }
+  95% {
+    transform: scaleY(0.15);
+  }
+}
+
+.avatar-eye {
+  animation: eye-blink 5s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Lip-sync talk animation */
+@keyframes mouth-talk {
+  0%, 100% {
+    transform: scaleY(0.2);
+    border-radius: 50% / 10%;
+  }
+  50% {
+    transform: scaleY(1.5);
+    border-radius: 50% / 50%;
+  }
+}
+
+.avatar-mouth-speaking {
+  animation: mouth-talk 0.2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+/* Glowing animation for mic buttons */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(239, 68, 68, 0);
+  }
+}
+
+.mic-pulse {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Floating animation for indicators */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.float-anim {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom Scrollbar for Chat Bubble log */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
